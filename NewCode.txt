@@ -1,0 +1,773 @@
+/**************************************************************/
+//Author: Rushil Shah
+// God's Eye
+
+/**************************************************************/
+
+//Ball Configurations
+byte leftPaddle0[8]
+{
+    B00001,B00001,B00001,B00001,B00000,B00000,B00000,B00000,
+};
+
+byte leftPaddle1[8]
+{
+    B00000,B00000,B00000,B00000,B00001,B00001,B00001,B00001,
+};
+
+byte rightPaddle0[8]
+{
+    B10000,B10000,B10000,B10000,B00000,B00000,B00000,B00000,
+};
+
+byte rightPaddle1[8]
+{
+    B00000,B00000,B00000,B00000,B10000,B10000,B10000,B10000,
+};
+
+byte p00[8]
+{
+    B10000,B00000,B00000,B00000,B00000,B00000,B00000,B00000,
+};
+
+byte p01[8]
+{
+    B01000,B00000,B00000,B00000,B00000,B00000,B00000,B00000,
+};
+byte p02[8]
+{
+    B00100,B00000,B00000,B00000,B00000,B00000,B00000,B00000,
+};
+byte p03[8]
+{
+    B00010,B00000,B00000,B00000,B00000,B00000,B00000,B00000,
+};
+byte p04[8]
+{
+    B00001,B00000,B00000,B00000,B00000,B00000,B00000,B00000,
+};
+byte p10[8]
+{
+    B00000,B10000,B00000,B00000,B00000,B00000,B00000,B00000,
+};
+byte p11[8]
+{
+    B00000,B01000,B00000,B00000,B00000,B00000,B00000,B00000,
+};
+byte p12[8]
+{
+    B00000,B00100,B00000,B00000,B00000,B00000,B00000,B00000,
+};
+byte p13[8]
+{
+    B00000,B00010,B00000,B00000,B00000,B00000,B00000,B00000,
+};
+byte p14[8]
+{
+    B00000,B00001,B00000,B00000,B00000,B00000,B00000,B00000,
+};
+byte p20[8]
+{
+    B00000,B00000,B10000,B00000,B00000,B00000,B00000,B00000,
+};
+byte p21[8]
+{
+    B00000,B00000,B01000,B00000,B00000,B00000,B00000, B00000,
+};
+byte p22[8]
+{
+    B00000,B00000,B00100,B00000,B00000,B00000,B00000,B00000,
+};
+byte p23[8]
+{
+    B00000,B00000,B00010,B00000,B00000,B00000,B00000,B00000,
+};
+byte p24[8]
+{
+    B00000,B00000,B00001,B00000,B00000,B00000,B00000,B00000,
+};
+byte p30[8]
+{
+    B00000,B00000,B00000,B10000,B00000,B00000,B00000,B00000,
+};
+byte p31[8]
+{
+    B00000,B00000,B00000,B01000,B00000,B00000,B00000,B00000,
+};
+byte p32[8]
+{
+    B00000,B00000,B00000,B00100,B00000,B00000,B00000,B00000,
+};
+byte p33[8]
+{
+    B00000,B00000,B00000,B00010,B00000,B00000,B00000,B00000,
+};
+byte p34[8]
+{
+    B00000,B00000,B00000,B00001,B00000,B00000,B00000,B00000,
+};
+byte p40[8]
+{
+    B00000,B00000,B00000,B00000,B10000,B00000,B00000,B00000,
+};
+byte p41[8]
+{
+    B00000,B00000,B00000,B00000,B01000,B00000,B00000,B00000,
+};
+byte p42[8]
+{
+    B00000,B00000,B00000,B00000,B00100,B00000,B00000,B00000,
+};
+byte p43[8]
+{
+    B00000,B00000,B00000,B00000,B00010,B00000,B00000,B00000,
+};
+byte p44[8]
+{
+    B00000,B00000,B00000,B00000,B00001,B00000,B00000,B00000,
+};
+byte p50[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B10000,B00000,B00000,
+};
+byte p51[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B01000,B00000,B00000,
+};
+byte p52[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00100,B00000,B00000,
+};
+byte p53[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00010,B00000,B00000,
+};
+byte p54[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00001,B00000,B00000,
+};
+byte p60[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00000,B10000,B00000,
+};
+byte p61[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00000,B01000,B00000,
+};
+byte p62[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00000,B00100,B00000,
+};
+byte p63[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00000,B00010,B00000,
+};
+byte p64[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00000,B00001,B00000,
+};
+byte p70[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00000,B00000,B10000,
+};
+byte p71[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00000,B00000,B01000,
+};
+byte p72[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00000,B00000,B00100,
+};
+byte p73[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00000,B00000,B00010,
+};
+byte p74[8]
+{
+    B00000,B00000,B00000,B00000,B00000,B00000,B00000,B00001,
+};
+//Array of custome characters of possible position of ball in one cell  
+byte *array[8][5] = {{p00,p01,p02,p03,p04},{p10,p11,p12,p13,p14},{p20,p21,p22,p23,p24},{p30,p31,p32,p33,p34},{p40,p41,p42,p43,p44},{p50,p51,p52,p53,p54},{p60,p61,p62,p63,p64},{p70,p71,p72,p73,p74}};
+
+#include <LiquidCrystal.h>
+#include <avr/interrupt.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 13, 10);
+
+//Global Variables
+
+int scoreRight = 0;
+int scoreLeft = 0;
+int leftPaddle_prev,leftPaddle_new;
+int X_left_paddle_prev, X_left_paddle_new;
+int X_right_paddle_prev, X_right_paddle_new;
+int rightPaddle_prev, rightPaddle_new;
+void ballTravel();
+void posUpdation();
+long int vert,hori;
+
+int i,temp = -1;
+
+int upDownDir;
+int leftRightDir;
+int angle;
+float vertAngle;
+int ballPos[2];
+float distance;
+float totalDistance;
+
+float speedIncreasePercent = 10;
+int gameAngleMin = 10;
+int gameAngleMax = 50;
+float initialDist = 1.0;
+
+//array of custome characters for player paddles 
+byte *pLeft[2] = {leftPaddle0,leftPaddle1};
+byte *pRight[2] = {rightPaddle0,rightPaddle1};
+
+//Function declarations
+void paddleHandling();
+void ballUpadte();
+void calcInitialDir();
+void drawChar(int, int);
+void gameStart();
+
+//Setting pins to work as interrutps
+void pciSetup(byte pin)
+{
+    *digitalPinToPCMSK(pin) |= bit (digitalPinToPCMSKbit(pin));  // enable pin
+    PCIFR  |= bit (digitalPinToPCICRbit(pin)); // clear any outstanding interrupt
+    PCICR  |= bit (digitalPinToPCICRbit(pin)); // enable interrupt for the group
+}
+
+ //left
+ISR (PCINT2_vect) // handle pin change interrupt for D0 to D7 here
+{
+	static unsigned long last_interrupt_time = 0;
+ 	unsigned long interrupt_time = millis();
+ 	// If interrupts come faster than 75ms, assume it's a bounce and ignore
+ 	if (interrupt_time - last_interrupt_time > 75) 
+ 	{
+   		if(digitalRead(6) == HIGH && leftPaddle_prev == 0 && X_left_paddle_prev == 0)
+        {
+          //Do nothing;
+        }
+        else if(digitalRead(6) == HIGH)
+        {
+          temp = 0;    
+        }
+        else if(digitalRead(7) == HIGH && leftPaddle_prev == 1 && X_left_paddle_prev == 1)
+        {
+          //Do nothing;
+        }
+        else if(digitalRead(7) == HIGH)
+        {
+          temp = 1; 
+        }  
+ 	}
+ 	last_interrupt_time = interrupt_time;  
+ } 
+
+//Right
+ISR (PCINT0_vect) // handle pin change interrupt for D8 to D13 here
+{    
+    static unsigned long last_interrupt_time = 0;
+ 	unsigned long interrupt_time = millis();
+ 	// If interrupts come faster than 75ms, assume it's a bounce and ignore
+ 	if (interrupt_time - last_interrupt_time > 75) 
+ 	{
+   		if(digitalRead(8) == HIGH && rightPaddle_prev == 0 && X_right_paddle_prev == 0)
+        {
+          //Do nothing;
+        }
+        else if(digitalRead(8) == HIGH)
+        {
+          temp = 2; 
+        }
+        else if(digitalRead(9) == HIGH && rightPaddle_new == 1 && X_right_paddle_new == 1)
+        {
+          //Do nothing;
+        }
+        else if(digitalRead(9) == HIGH)
+        {
+          temp = 3;             
+        }  
+ 	}
+ 	last_interrupt_time = interrupt_time;
+}
+
+void setup()
+{
+  //Setting scores to zero
+  scoreRight = 0;
+  scoreLeft = 0;  
+  
+  //Sets up pins as input pins
+  pinMode(6,INPUT);
+  pinMode(7,INPUT);
+  pinMode(8,INPUT);
+  pinMode(9,INPUT);
+  
+  //Sets up LCD
+  lcd.begin(16,2);
+  Serial.begin(9600);
+  lcd.clear();
+  
+  //Pullup
+  int i;
+  for(i=6;i<=9;i++)
+  {  
+    digitalWrite(i,HIGH);
+  }     
+  
+  //Enables global interrupt
+  sei(); 
+  
+  //Calling function to assing pins for interrupt
+  pciSetup(8);
+  pciSetup(9);
+  pciSetup(7);
+  pciSetup(6);
+  
+  
+  //Displaying initial Message
+  lcd.setCursor(5,0);
+  lcd.print("PONG");
+  
+  delay(1000);
+
+  lcd.setCursor(6,1);
+  lcd.print("3..");
+  
+  delay(1000);
+	
+  lcd.print("   ");
+  lcd.setCursor(6,1);
+  lcd.print("2..");
+  
+  delay(1000);
+  
+  lcd.print("   ");
+  lcd.setCursor(6,1);
+  lcd.print("1..");
+  delay(1000);
+  
+   
+  lcd.clear();
+  delay(1000);
+  
+  //Setting initial location of paddles
+  leftPaddle_new = 1;
+  X_left_paddle_new =0;
+  
+  rightPaddle_new = 0;
+  X_right_paddle_new = 1;
+  
+  leftPaddle_prev = 1;
+  X_left_paddle_prev =0;
+  
+  rightPaddle_prev = 0;
+  X_right_paddle_prev = 1;
+  
+  lcd.createChar(2,pLeft[leftPaddle_new]);
+  lcd.setCursor(0,X_left_paddle_new);
+  lcd.write((byte)2);
+  
+  lcd.createChar(3,pRight[rightPaddle_new]);
+  lcd.setCursor(10,X_right_paddle_new);
+  lcd.write((byte)3);
+   
+  gameStart();
+  
+}  
+void gameStart()
+{
+  //Setting Score Board
+  lcd.setCursor(11,0);
+  lcd.print("P1:");
+  lcd.print(scoreRight);
+  
+  lcd.setCursor(11,1);
+  lcd.print("P2:");
+  lcd.print(scoreLeft);
+  
+  //Calculating intitial trajectory of ball
+  calcInitialDir();
+  
+  //Setting ball's initial position at centre
+  ballPos[0] = 29;
+  ballPos[1] = 7;
+  
+  distance = initialDist;
+  totalDistance = distance;
+} 
+
+void loop()
+{
+ 	ballUpdate();
+  	delay(1);
+ 	if(temp!=-1)
+    {
+    	paddleHandling(); 
+    }
+}
+
+void calcInitialDir() 
+{
+ // randomly get a 1 or -1 for the up/down and left/right directions and the ball's angle of travel from the X axis  
+  upDownDir = 0;
+  leftRightDir = 0;
+  while (upDownDir == 0) 
+  {
+  	upDownDir = random(-1,2);
+  }
+  //Serial.println(upDownDir);
+  while (leftRightDir == 0) 
+  {
+    leftRightDir = random(-1,2);
+  }
+  //Serial.println(leftRightDir);
+  // Randomly grab a game angle between Min and Max values
+  angle = random(gameAngleMin,gameAngleMax + 1);
+}
+
+void ballUpdate()
+{
+	// Calculate the vertical angle of the ball's game angle (trajectory angle)
+  	if (upDownDir == 1 && leftRightDir == -1)
+    {
+      vertAngle = 90 - angle;
+    }
+    else if (upDownDir == -1 && leftRightDir == -1)
+    {
+      vertAngle = 90 + angle;
+    }
+    else if (upDownDir == -1 && leftRightDir == 1)
+    {
+      vertAngle = 270 - angle;
+    }
+    else
+    {
+      vertAngle = 270 + angle;
+    }
+    // Convert degrees to radians
+    vertAngle = vertAngle * PI / 180.0;
+
+    // Solve for the ball's new position (uses the ball's last deflection point along with total distance to better display the true game angle)
+    int newX = sin(vertAngle) * totalDistance + (float)ballPos[0];
+    int newY = cos(vertAngle) * totalDistance + (float)ballPos[1]; 
+
+    // Constrain the ball's position to be on the game board
+    newX = constrain(newX, 5, 49);
+    newY = constrain(newY, 0, 15);
+  
+  	Serial.print(newY);
+    Serial.print(" ");
+    Serial.println(newX);
+
+    // Update the total distance between the ball and it's last deflection (bounce) point within the game 
+    totalDistance = totalDistance + distance;  
+
+    // Check if the ball has hit a top/bottom boundary and if so update it's Up/Down state value 
+    if (newY == 0)      // Hit the Bottom
+    {
+      upDownDir = 1;
+      totalDistance = distance;
+      ballPos[0] = newX;
+      ballPos[1] = newY + 1;
+    }
+    else if (newY == 15)  // Hit the Top
+    {
+      upDownDir = -1;
+      totalDistance = distance;
+      ballPos[0] = newX;
+      ballPos[1] = newY - 1;
+    } 
+  	if (newX == 5)      // Hit the left paddle
+  	{
+      distance = (1.0 + speedIncreasePercent / 100.0) * distance;
+      if(leftPaddle_prev == 0 && X_left_paddle_prev == 0 &&  (newY >= 0 && newY <=3))
+      {
+        leftRightDir = -1;
+        totalDistance = distance;
+        ballPos[0] = newX + 1;
+        ballPos[1] = newY;
+      } 
+      else if(leftPaddle_prev == 1 && X_left_paddle_prev == 0 && (newY >= 4 && newY <=7))
+      {
+        leftRightDir = -1;
+        totalDistance = distance;
+        ballPos[0] = newX + 1;
+        ballPos[1] = newY;
+      }
+      else if(leftPaddle_prev == 0 &&  X_left_paddle_prev == 1 && (newY >= 8 && newY <= 11))
+      {
+        leftRightDir = -1;
+        totalDistance = distance;
+        ballPos[0] = newX + 1;
+        ballPos[1] = newY;
+      }
+      else if(leftPaddle_prev == 1 &&  X_left_paddle_prev == 1 && (newY >= 12 && newY <= 15))
+      {
+        leftRightDir = -1;
+        totalDistance = distance;
+        ballPos[0] = newX + 1;
+        ballPos[1] = newY;
+      }
+      else
+      {
+        scoreRight = scoreRight+1;
+        if(scoreRight == 7)
+        {
+          delay(500);
+          lcd.clear();
+          lcd.setCursor(5,0);
+          lcd.print("WINNER!");
+          lcd.setCursor(5,1);
+          lcd.print("PLAYER 1");
+          delay(5000);
+          setup();
+        }  
+        else
+        {  
+        	gameStart();
+        } 
+      }  
+    }
+  	else if (newX == 49)      // Hit the right paddle
+  	{
+      distance = (1.0 + speedIncreasePercent / 100.0) * distance;
+      if(rightPaddle_prev == 0 && X_right_paddle_prev == 0 && (newY >= 0 && newY <=3))
+      {
+        leftRightDir = 1;
+        totalDistance = distance;
+        ballPos[0] = newX - 1;
+        ballPos[1] = newY;
+      } 
+      else if(rightPaddle_prev == 1 && X_right_paddle_prev == 0 && (newY >= 4 && newY <= 7))
+      {
+        leftRightDir = 1;
+        totalDistance = distance;
+        ballPos[0] = newX - 1;
+        ballPos[1] = newY;
+      }
+      else if(rightPaddle_prev == 0 &&  X_right_paddle_prev == 1 && (newY >= 8 && newY <= 11))
+      {
+        leftRightDir = 1;
+        totalDistance = distance;
+        ballPos[0] = newX - 1;
+        ballPos[1] = newY;
+      }
+      else if(rightPaddle_prev == 1 &&  X_right_paddle_prev == 1 && (newY >= 12 && newY <= 15))
+      {
+        leftRightDir = 1;
+        totalDistance = distance;
+        ballPos[0] = newX - 1;
+        ballPos[1] = newY;
+      }
+      else
+      {
+        scoreLeft = scoreLeft+1;
+        if(scoreLeft == 7)
+        {
+          delay(500);
+          lcd.clear();
+          lcd.setCursor(5,0);
+          lcd.print("WINNER!");
+          lcd.setCursor(5,1);
+          lcd.print("PLAYER 2");
+          delay(5000);
+          setup();
+        }  
+        else
+        {  
+        	gameStart();
+        } 
+      }    
+    }
+  	drawChar(newX,newY);
+}
+
+void drawChar(int X, int Y)
+{
+    int LCDrow;
+    int LCDcol;
+
+    // Determine which row of the LCD the ball's character is on
+    if (Y <= 7) 
+    {
+      LCDrow = 0;
+    }
+    else 
+    {
+      LCDrow = 1;
+    }
+    //Determine which column of the LCD the ball's character is on
+    if (X <= 4)
+    {
+      LCDcol = 0;
+    }
+    else if (X <= 9)
+    {
+      LCDcol = 1;
+    }
+    else if (X <= 14)
+    {
+      LCDcol = 2;
+    }
+    else if (X <= 19)
+    {
+      LCDcol = 3;
+    }
+    else if (X <= 24) 
+    {
+      LCDcol = 4;
+    }
+    else if (X <= 29)
+    {
+      LCDcol = 5;
+    }
+    else if (X <= 34)
+    {
+      LCDcol = 6;
+    }
+    else if (X <= 39) 
+    {
+      LCDcol = 7;
+    }
+    else if (X <= 44)
+    {
+      LCDcol = 8;
+    }
+    else if (X <= 49) 
+    {
+      LCDcol = 9;
+    }
+    
+    // Determine the ball's position (single pixel) within a single LCD character (i.e. within the 8x5 pixels that make up a single LCD character)
+    int dx = X - 5 * LCDcol;    // Column position within the LCD character
+    int dy;
+
+    // Row position within the LCD character
+    if (Y == 0 || Y == 8)
+    {
+      dy = 0;
+    }
+    else if (Y == 1 || Y == 9) 
+    {
+      dy = 1;
+    }
+    else if (Y == 2 || Y == 10) 
+    {
+      dy = 2;
+    }
+    else if (Y == 3 || Y == 11) 
+    {
+      dy = 3;
+    }
+    else if (Y == 4 || Y == 12)
+    {
+      dy = 4;
+    }
+    else if (Y == 5 || Y == 13) 
+    {
+      dy = 5;
+    }
+    else if (Y == 6 || Y == 14) 
+    {
+      dy = 6;
+    }
+    else if (Y == 7 || Y == 15)
+    {
+      dy = 7;
+    }
+  
+    lcd.setCursor(1,0);
+    lcd.print("         ");
+    lcd.setCursor(1,1);
+    lcd.print("         ");
+
+    lcd.createChar(1,array[dy][dx]);  // Value is a pointer to an array of 8 bytes
+    lcd.setCursor(LCDcol,LCDrow);
+    lcd.write(1);
+} 
+
+void paddleHandling() //Changes the position of paddle as per the ISR 
+{
+  if(temp == 0)
+  {
+    lcd.setCursor(0,X_left_paddle_prev);
+    lcd.print(" ");
+    
+    leftPaddle_new = (leftPaddle_prev + 1)%2;
+    if(leftPaddle_new == 1)
+    {  
+    	X_left_paddle_new = (X_left_paddle_prev + 1)%2;
+    } 
+    
+    lcd.createChar(6,pLeft[leftPaddle_new]);
+    lcd.setCursor(0,X_left_paddle_new);
+    lcd.write((byte)6);
+    
+    leftPaddle_prev = leftPaddle_new;
+  	X_left_paddle_prev = X_left_paddle_new; 
+  	temp = -1;
+  } 
+  else if(temp == 1)
+  {
+    lcd.setCursor(0,X_left_paddle_prev);
+    lcd.print(" ");
+    
+    leftPaddle_new = (leftPaddle_prev + 1)%2;
+    if(leftPaddle_new == 0)
+    {  
+    	X_left_paddle_new = (X_left_paddle_prev + 1)%2;
+    }  
+    
+    lcd.createChar(6,pLeft[leftPaddle_new]);
+    lcd.setCursor(0,X_left_paddle_new);
+    lcd.write((byte)6);
+    
+    leftPaddle_prev = leftPaddle_new;
+  	X_left_paddle_prev = X_left_paddle_new; 
+  	temp = -1;
+  }
+  else if(temp == 2)
+  {
+    lcd.setCursor(10,X_right_paddle_prev);
+    lcd.print(" ");
+    
+    rightPaddle_new = (rightPaddle_prev + 1)%2;
+    if(rightPaddle_new == 1)
+    {  
+    	X_right_paddle_new = (X_right_paddle_prev + 1)%2;
+    } 
+
+    lcd.createChar(5,pRight[rightPaddle_new]);
+    lcd.setCursor(10,X_right_paddle_new);
+    lcd.write((byte)5);
+    
+    rightPaddle_prev = rightPaddle_new;
+  	X_right_paddle_prev = X_right_paddle_new; 
+  	temp = -1;
+  }  
+  else if(temp == 3)
+  {
+    lcd.setCursor(10,X_right_paddle_prev);
+    lcd.print(" ");
+    
+    rightPaddle_new = (rightPaddle_prev + 1)%2;
+    if(rightPaddle_new == 0)
+    {  
+    	X_right_paddle_new = (X_right_paddle_prev + 1)%2;
+    }   
+   
+    lcd.createChar(5,pRight[rightPaddle_new]);
+    lcd.setCursor(10,X_right_paddle_new);
+    lcd.write((byte)5);
+    
+    rightPaddle_prev = rightPaddle_new;
+  	X_right_paddle_prev = X_right_paddle_new; 
+  	temp = -1;
+  }
+}

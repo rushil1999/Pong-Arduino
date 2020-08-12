@@ -1,0 +1,782 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+  byte ball00[8]
+  {
+      B10000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  
+  byte ball01[8]
+  {
+      B01000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball02[8]
+  {
+      B00100,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball03[8]
+  {
+      B00010,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball04[8]
+  {
+      B00001,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball10[8]
+  {
+      B00000,
+      B10000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball11[8]
+  {
+      B00000,
+      B01000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball12[8]
+  {
+      B00000,
+      B00100,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball13[8]
+  {
+      B00000,
+      B00010,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball14[8]
+  {
+      B00000,
+      B00001,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball20[8]
+  {
+      B00000,
+      B00000,
+      B10000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball21[8]
+  {
+      B00000,
+      B00000,
+      B01000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball22[8]
+  {
+      B00000,
+      B00000,
+      B00100,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball23[8]
+  {
+      B00000,
+      B00000,
+      B00010,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball24[8]
+  {
+      B00000,
+      B00000,
+      B00001,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball30[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B10000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball31[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B01000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball32[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00100,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball33[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00010,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball34[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00001,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball40[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B10000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball41[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B01000,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball42[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00100,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball43[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00010,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball44[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00001,
+      B00000,
+      B00000,
+      B00000,
+  };
+  byte ball50[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B10000,
+      B00000,
+      B00000,
+  };
+  byte ball51[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B01000,
+      B00000,
+      B00000,
+  };
+  byte ball52[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00100,
+      B00000,
+      B00000,
+  };
+  byte ball53[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00010,
+      B00000,
+      B00000,
+  };
+  byte ball54[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00001,
+      B00000,
+      B00000,
+  };
+  byte ball60[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B10000,
+      B00000,
+  };
+  byte ball61[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B01000,
+      B00000,
+  };
+  byte ball62[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00100,
+      B00000,
+  };
+  byte ball63[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00010,
+      B00000,
+  };
+  byte ball64[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00001,
+      B00000,
+  };
+  byte ball70[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B10000,
+  };
+  byte ball71[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B01000,
+  };
+  byte ball72[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00100,
+  };
+  byte ball73[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00010,
+  };
+  byte ball74[8]
+  {
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00000,
+      B00001,
+  };
+
+void ballTravel();
+void posUpdation();
+long int X,Y,dx,dy,vert,hori;
+void setup()
+{
+
+  Serial.begin(9600);
+  X = 1;
+  Y = 7;
+  //dx = random(0,5);
+  //dy = random(0,8);
+  dx = 0;
+  dy = 7;
+  vert = 1;
+  hori = 1;
+  Serial.print("X: ");
+  Serial.println(X);
+  Serial.print("Y: ");
+  Serial.println(Y);
+  Serial.print("x_in: ");
+  Serial.println(dx);
+  Serial.print("y_in: ");
+  Serial.println(dy);
+  
+}
+
+void loop()
+{
+  ballTravel();
+  delay(100);
+  posUpdation();
+  delay(100);
+  
+}
+void posUpdation()
+{
+  if(vert == 1 && hori == 1)
+  {
+      if(dy>0 && dx<4)
+      {
+        dx = dx + 1;
+        dy = dy - 1;
+      }
+      else if(dy>0 && dx == 4 && X == 1)
+      {
+        dx = 0;
+        dy = dy-1;
+        Y = Y + 1;
+      }
+      else if(dy == 0 && dx < 4 && X == 1)
+      {
+        dy = 7;
+        dx = dx + 1;
+      }
+      else if(dy == 0 && dx == 4 && X == 1)
+      {
+        dy = 7;
+        dx = 0;
+        
+      }
+    
+  }
+  
+}
+void ballTravel()
+{
+  if(dy == 0 && dx == 0)
+  {
+      Serial.println("RUSHIL");
+      lcd.createChar(1,ball00);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 0 && dx == 1)
+  {
+      lcd.createChar(1,ball01);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 0 && dx == 2)
+  {   
+      lcd.createChar(1,ball02);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 0 && dx == 3)
+  {   
+      lcd.createChar(1,ball03);
+	  lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 0 && dx == 4)
+  {   
+      lcd.createChar(1,ball04);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 1 && dx == 0)
+  {   
+      lcd.createChar(1,ball10);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 1 && dx == 1)
+  {   
+      lcd.createChar(1,ball11);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 1 && dx == 2)
+  {   
+      lcd.createChar(1,ball12);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 1 && dx == 3)
+  {   
+      lcd.createChar(1,ball13);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 1 && dx == 4)
+  {   
+      lcd.createChar(1,ball14);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 2 && dx == 0)
+  {
+      lcd.createChar(1,ball20);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 2 && dx == 1)
+  {
+      Serial.println("Hey");
+      lcd.createChar(1,ball21);
+      lcd.setCursor(Y,X);   
+      lcd.write(1);
+  }
+
+  else if(dy == 2 && dx == 2)
+  {
+      lcd.createChar(1,ball22);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 2 && dx == 3)
+  {
+      lcd.createChar(1,ball23);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 2 && dx == 4)
+  {
+      lcd.createChar(1,ball24);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 3 && dx == 0)
+  {
+      lcd.createChar(1,ball30);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 3 && dx == 1)
+  {
+      lcd.createChar(1,ball31);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 3 && dx == 2)
+  {
+      lcd.createChar(1,ball32);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 3 && dx == 3)
+  {
+      lcd.createChar(1,ball33);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 3 && dx == 4)
+  {
+      
+      lcd.createChar(1,ball34);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 4 && dx == 0)
+  {
+      
+      lcd.createChar(1,ball40);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 4 && dx == 1)
+  {
+      
+      lcd.createChar(1,ball41);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 4 && dx == 2)
+  {
+      
+      lcd.createChar(1,ball42);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 4 && dx == 3)
+  {
+      
+      lcd.createChar(1,ball43);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 4 && dx == 4)
+  {
+      
+      lcd.createChar(1,ball44);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 5 && dx == 0)
+  {
+      
+      lcd.createChar(1,ball50);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+
+  else if(dy == 5 && dx == 1)
+  {
+      lcd.createChar(1,ball51);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 5 && dx == 2)
+  {
+      lcd.createChar(1,ball52);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 5 && dx == 3)
+  {
+      lcd.createChar(1,ball53);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 5 && dx == 4)
+  {
+      lcd.createChar(1,ball54);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 6 && dx == 0)
+  {
+      lcd.createChar(1,ball60);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 6 && dx == 1)
+  {
+      lcd.createChar(1,ball61);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 6 && dx == 2)
+  {
+      lcd.createChar(1,ball62);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 6 && dx == 3)
+  {
+      lcd.createChar(1,ball63);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 6 && dx == 4)
+  {   
+      lcd.createChar(1,ball64);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 7 && dx == 0)
+  {
+      //Serial.println("HEY");
+      lcd.createChar(1,ball70);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 7 && dx == 1)
+  {
+      lcd.createChar(1,ball71);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 7 && dx == 2)
+  {
+      lcd.createChar(1,ball72);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 7 && dx == 3)
+  {
+      lcd.createChar(1,ball73);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+  else if(dy == 7 && dx == 2)
+  {
+      lcd.createChar(1,ball74);
+      lcd.setCursor(Y,X);
+      lcd.write(1);
+  }
+}  
