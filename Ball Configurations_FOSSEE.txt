@@ -1,0 +1,704 @@
+byte ball00[8]
+{
+	B10000,
+	B00000,
+	B00000,
+	B00000,
+	b00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(0,ball00);
+byte ball01[8]
+{
+	B01000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(1,ball01);
+byte ball02[8]
+{
+	B00100,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(2,ball02);
+byte ball03[8]
+{
+	B00010,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(3,ball03);
+byte ball04[8]
+{
+	B00001,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(4,ball04);
+byte ball10[8]
+{
+	B00000,
+	B10000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(5,ball10);
+byte ball11[8]
+{
+	B00000,
+	B01000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(6,ball11);
+byte ball12[8]
+{
+	B00000,
+	B00100,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(7,ball12);
+byte ball13[8]
+{
+	B00000,
+	B00010,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(8,ball13);
+byte ball14[8]
+{
+	B00000,
+	B00001,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(9,ball14);
+byte ball20[8]
+{
+	B00000,
+	B00000,
+	B10000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(10,ball20);
+byte ball21[8]
+{
+	B00000,
+	B00000,
+	B01000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(11,ball21);
+byte ball22[8]
+{
+	B00000,
+	B00000,
+	B00100,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(12,ball22);
+byte ball23[8]
+{
+	B00000,
+	B00000,
+	B00010,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(13,ball23);
+byte ball24[8]
+{
+	B00000,
+	B00000,
+	B00001,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(14,ball24);
+byte ball30[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B10000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(15,ball30);
+byte ball31[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B01000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(16,ball31);
+byte ball32[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00100,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(17,ball32);
+byte ball33[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00010,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(18,ball33);
+byte ball34[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00001,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(19,ball34);
+byte ball40[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B10000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(20,ball40);
+byte ball41[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B01000,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(21,ball41);
+byte ball42[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00100,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(22,ball42);
+byte ball43[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00010,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(23,ball43);
+byte ball44[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00001,
+	B00000,
+	B00000,
+	B00000,
+};
+lcd.createChar(24,ball44);
+byte ball50[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B10000,
+	B00000,
+	B00000,
+};
+lcd.createChar(25,ball50);
+byte ball51[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B01000,
+	B00000,
+	B00000,
+};
+lcd.createChar(26,ball51);
+byte ball52[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00100,
+	B00000,
+	B00000,
+};
+lcd.createChar(27,ball52);
+byte ball53[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00010,
+	B00000,
+	B00000,
+};
+lcd.createChar(28,ball53);
+byte ball54[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00001,
+	B00000,
+	B00000,
+};
+lcd.createChar(29,ball54);
+byte ball60[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B10000,
+	B00000,
+};
+lcd.createChar(30,ball60);
+byte ball61[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B01000,
+	B00000,
+};
+lcd.createChar(31,ball61);
+byte ball62[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00100,
+	B00000,
+};
+lcd.createChar(32,ball62);
+byte ball63[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00010,
+	B00000,
+};
+lcd.createChar(33,ball63);
+byte ball64[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00001,
+	B00000,
+};
+lcd.createChar(34,ball64);
+byte ball70[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B10000,
+};
+lcd.createChar(35,ball70);
+byte ball71[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B01000,
+};
+lcd.createChar(36,ball71);
+byte ball72[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00100,
+};
+lcd.createChar(37,ball72);
+byte ball73[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00010,
+};
+lcd.createChar(38,ball73);
+byte ball74[8]
+{
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B00001,
+};
+lcd.createChar(39,ball74);
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+if(dx == 0 && dy == 0)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(0);
+}
+if(dx == 0 && dy == 1)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(1);
+}
+if(dx == 0 && dy == 2)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(2);
+}
+if(dx == 0 && dy == 3)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(3);
+}
+if(dx == 0 && dy == 4)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(4);
+}
+if(dx == 1 && dy == 0)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(5);
+}
+
+if(dx == 1 && dy == 1)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(6);
+}
+
+if(dx == 1 && dy == 2)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(7);
+}
+
+if(dx == 1 && dy == 3)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(8);
+}
+
+if(dx == 1 && dy == 4)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(9);
+}
+
+if(dx == 2 && dy == 0)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(10);
+}
+
+if(dx == 2 && dy == 1)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(11);
+}
+
+if(dx == 2 && dy == 2)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(12);
+}
+
+if(dx == 2 && dy == 3)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(13);
+}
+
+if(dx == 2 && dy == 4)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(14);
+}
+
+if(dx == 3 && dy == 0)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(15);
+}
+
+if(dx == 3 && dy == 1)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(16);
+}
+
+if(dx == 3 && dy == 2)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(17);
+}
+
+if(dx == 3 && dy == 3)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(18);
+}
+
+if(dx == 3 && dy == 4)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(19);
+}
+
+if(dx == 4 && dy == 0)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(20);
+}
+
+if(dx == 4 && dy == 1)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(21);
+}
+
+if(dx == 4 && dy == 2)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(22);
+}
+if(dx == 4 && dy == 3)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(23);
+}
+if(dx == 4 && dy == 4)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(24);
+}
+
+if(dx == 5 && dy == 0)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(25);
+}
+
+if(dx == 5 && dy == 1)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(26);
+}
+if(dx == 5 && dy == 2)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(27);
+}
+if(dx == 5 && dy == 3)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(28);
+}
+if(dx == 5 && dy == 4)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(29);
+}
+if(dx == 6 && dy == 0)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(30);
+}
+if(dx == 6 && dy == 1)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(31);
+}
+if(dx == 6 && dy == 2)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(32);
+}
+if(dx == 6 && dy == 3)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(33);
+}
+if(dx == 6 && dy == 4)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(34);
+}
+if(dx == 7 && dy == 0)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(35);
+}
+if(dx == 7 && dy == 1)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(36);
+}
+if(dx == 7 && dy == 2)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(37);
+}
+if(dx == 7 && dy == 3)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(38);
+}
+if(dx == 7 && dy == 2)
+{
+	lcd.setCursor(Y,X);
+	lcd.write(39);
+}
+
+
+
+
